@@ -2,5 +2,6 @@
 - name: get uptime
   shell: uptime
   register: ret
+  changed_when: False
 
 - debug: msg={{ ret.stdout | default("no data") }}
