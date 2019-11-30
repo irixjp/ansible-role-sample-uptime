@@ -1,0 +1,6 @@
+---
+- name: get uptime
+  shell: uptime
+  register: ret
+
+- debug: msg={{ ret.stdout | default("no data") }}
